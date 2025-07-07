@@ -45,7 +45,7 @@ class PaymentCard extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           // Info section
-          const Text('Price:    \$500'),
+          const Text('Price: \$500'),
           const Text('Student:  Ahmed Ibrahim (Hamata)'),
           Row(
             children: const [
@@ -53,14 +53,14 @@ class PaymentCard extends StatelessWidget {
               Text('View', style: TextStyle(color: AppColors.primary)),
             ],
           ),
-          const Text('Service:  Chapters'),
+          const Text('Service: Chapters'),
           Row(
             children: const [
-              Text('Receipt:  '),
+              Text('Receipt: '),
               Text('View', style: TextStyle(color: AppColors.primary)),
             ],
           ),
-          const Text('Date:     2025-06-29'),
+          const Text('Date:  2025-06-29'),
           const SizedBox(height: 12),
           // Buttons
           Row(

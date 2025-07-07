@@ -16,7 +16,7 @@ class PendingScreen extends StatelessWidget {
         child: Column(
           children: [
             // Date Filter
-            CustomSearchFilterBar(),
+            CustomSearchFilterBar(onFilterTap: (){},),
             const SizedBox(height: 16),
             // List of Pending Payments
             Expanded(

@@ -1,43 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:maths_house/core/app_colors.dart';
 
 class CustomSearchFilterBar extends StatelessWidget {
-  const CustomSearchFilterBar({super.key});
+  final VoidCallback onFilterTap;
+
+  const CustomSearchFilterBar({super.key, required this.onFilterTap});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Container(
-            height: 50,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey.shade300),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Row(
-              children: const [
-                Icon(Icons.calendar_today, color: Colors.red),
-                SizedBox(width: 8),
-                Text(
-                  'From / To',
-                  style: TextStyle(color: Colors.grey),
-                ),
-              ],
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.08,
+      decoration: BoxDecoration(
+        border: Border.all(color: AppColors.primary),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          const SizedBox(width: 8),
+          const Icon(Icons.calendar_today, color: AppColors.primary),
+          const SizedBox(width: 8),
+          const Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'From / To',
+                border: InputBorder.none,
+              ),
             ),
           ),
-        ),
-        const SizedBox(width: 8),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.06,
-          width: MediaQuery.of(context).size.height * 0.06,
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: const Icon(Icons.filter_list, color: Colors.white),
-        ),
-      ],
+          Container(
+            width: 50,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              color: AppColors.primary,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(7),
+                bottomRight: Radius.circular(7),
+              ),
+            ),
+            child: IconButton(
+              icon: const Icon(Icons.filter_list, color: Colors.white),
+              onPressed: onFilterTap,
+            ),
+          )
+        ],
+      ),
     );
   }
 }

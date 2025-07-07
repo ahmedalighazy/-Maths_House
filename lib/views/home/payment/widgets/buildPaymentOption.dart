@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maths_house/core/app_colors.dart';
 
 Widget buildPaymentOption({
   required IconData icon,
@@ -18,12 +19,12 @@ Widget buildPaymentOption({
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, color: Colors.red, size: 32),
+          Icon(icon, color: AppColors.primary, size: 32),
           const SizedBox(height: 8),
           Text(
             label,
             style: const TextStyle(
-              color: Colors.red,
+              color: AppColors.primary,
               fontWeight: FontWeight.w500,
               fontSize: 16,
             ),
