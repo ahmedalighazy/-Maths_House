@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maths_house/core/app_colors.dart';
+import 'package:maths_house/core/widgets/custom_buttons.dart';
 
 class CustomCard extends StatelessWidget {
   final String title;
@@ -74,34 +75,20 @@ class CustomCard extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: ElevatedButton(
-                    onPressed: onPrimaryPressed,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.primary,
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: Text(primaryButtonText, style: const TextStyle(color: Colors.white)),
+                  child: CustomFilledButton(
+                    text: 'Edit',
+                    onPressed: (){},
                   ),
                 ),
-                const SizedBox(width: 8),
+                const SizedBox(width: 12),
                 Expanded(
-                  child: OutlinedButton(
-                    onPressed: onSecondaryPressed,
-                    style: OutlinedButton.styleFrom(
-                      side: const BorderSide(color: AppColors.primary),
-                      padding: const EdgeInsets.symmetric(vertical: 15),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: Text(secondaryButtonText, style: const TextStyle(color: AppColors.primary)),
+                  child: CustomOutlinedButton(
+                    text: 'Delete',
+                    onPressed: (){},
                   ),
                 ),
               ],
-            )
+            ),
         ],
       ),
     );

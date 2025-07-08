@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maths_house/core/app_colors.dart';
 import 'package:maths_house/views/home/packages/packege_screen.dart';
-import 'package:maths_house/views/home/widgets/build_card_home.dart';
+import 'package:maths_house/core/widgets/build_card_home.dart';
 
 import 'live_model/live_model_screen.dart';
 import 'payment/payment_screen.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maths_house/core/app_colors.dart';
+import 'package:maths_house/core/widgets/custom_buttons.dart';
 
 class TeacherCard extends StatelessWidget {
   const TeacherCard({super.key});
@@ -10,7 +11,7 @@ class TeacherCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.red.shade50,
+        color: AppColors.primaryLight,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -42,34 +43,19 @@ class TeacherCard extends StatelessWidget {
           const SizedBox(height: 6),
           const Text('Course: EST 1 / EST 2 / SAT / ACT'),
           const SizedBox(height: 12),
-
           Row(
             children: [
               Expanded(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primary,
-                    padding: const EdgeInsets.symmetric(vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  child: const Text('Edit', style: TextStyle(color: Colors.white)),
+                child: CustomFilledButton(
+                  text: 'Edit',
+                  onPressed: (){},
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 12),
               Expanded(
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: AppColors.primary),
-                    padding: const EdgeInsets.symmetric(vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                  child: const Text('Delete', style: TextStyle(color:AppColors.primary)),
+                child: CustomOutlinedButton(
+                  text: 'Delete',
+                  onPressed: (){},
                 ),
               ),
             ],
