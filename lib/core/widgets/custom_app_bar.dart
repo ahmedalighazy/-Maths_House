@@ -3,7 +3,7 @@ import 'package:maths_house/core/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final VoidCallback? onAddPressed; // زر الإضافة
+  final VoidCallback? onAddPressed;
   final bool showAddIcon;
 
   const CustomAppBar({
